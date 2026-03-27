@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EconoKids - Match Master 1v1</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,700;0,800;1,800&amp;family=Be_Vietnam_Pro:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary": "#fff1d7",
+              "on-primary-fixed": "#1a4700",
+              "surface-dim": "#d5d4d4",
+              "secondary-container": "#ffcb2a",
+              "on-primary-fixed-variant": "#296700",
+              "tertiary-dim": "#00557a",
+              "outline": "#777776",
+              "surface-bright": "#f8f6f5",
+              "inverse-on-surface": "#9e9d9c",
+              "error": "#b02500",
+              "secondary-dim": "#644c00",
+              "primary-fixed-dim": "#76ec33",
+              "tertiary-fixed-dim": "#13adf3",
+              "secondary": "#725800",
+              "surface": "#f8f6f5",
+              "inverse-surface": "#0e0e0e",
+              "on-surface": "#2e2f2f",
+              "on-background": "#2e2f2f",
+              "on-primary-container": "#245c00",
+              "surface-container-low": "#f2f0f0",
+              "surface-container-highest": "#dedcdc",
+              "on-secondary-fixed-variant": "#654d00",
+              "primary-fixed": "#84fb42",
+              "surface-variant": "#dedcdc",
+              "primary-dim": "#235b00",
+              "surface-container": "#e9e8e7",
+              "secondary-fixed": "#ffcb2a",
+              "on-surface-variant": "#5c5b5b",
+              "inverse-primary": "#84fb42",
+              "surface-container-lowest": "#ffffff",
+              "on-error-container": "#520c00",
+              "error-container": "#f95630",
+              "on-error": "#ffefec",
+              "surface-tint": "#2a6900",
+              "tertiary-fixed": "#3ebbff",
+              "on-primary": "#d5ffb9",
+              "on-tertiary": "#e9f4ff",
+              "on-tertiary-fixed": "#001a29",
+              "primary": "#2a6900",
+              "on-secondary-fixed": "#423200",
+              "outline-variant": "#aeadac",
+              "error-dim": "#b92902",
+              "tertiary-container": "#3ebbff",
+              "background": "#f8f6f5",
+              "on-secondary-container": "#5a4400",
+              "surface-container-high": "#e4e2e2",
+              "tertiary": "#00628c",
+              "on-tertiary-fixed-variant": "#003d5a",
+              "secondary-fixed-dim": "#f1bd00",
+              "primary-container": "#84fb42",
+              "on-tertiary-container": "#00344d",
+              "kahoot-red": "#e21b3c",
+              "kahoot-blue": "#1368ce",
+              "kahoot-yellow": "#d89e00",
+              "kahoot-green": "#26890c"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Be Vietnam Pro"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .chunky-shadow-primary { box-shadow: 0 6px 0 0 #235b00; }
+        .chunky-shadow-surface { box-shadow: 0 6px 0 0 #dedcdc; }
+        .chunky-shadow-red { box-shadow: 0 6px 0 0 #a0132a; }
+        .chunky-shadow-blue { box-shadow: 0 6px 0 0 #0d4a94; }
+        .chunky-shadow-yellow { box-shadow: 0 6px 0 0 #a67900; }
+        .chunky-shadow-green { box-shadow: 0 6px 0 0 #1b6208; }
+        
+        .timer-shrink {
+            animation: shrink 15s linear forwards;
+        }
+        @keyframes shrink {
+            from { width: 100%; }
+            to { width: 0%; }
+        }
+
+        .correct-pulse {
+            animation: pulse-correct 0.5s ease-in-out infinite alternate;
+        }
+        @keyframes pulse-correct {
+            from { transform: scale(1); }
+            to { transform: scale(1.05); }
+        }
+
+        .error-shake {
+            animation: shake-error 0.4s ease-in-out;
+        }
+        @keyframes shake-error {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-8px); }
+            50% { transform: translateX(8px); }
+            75% { transform: translateX(-8px); }
+        }
+
+        .thinking-dots::after {
+            content: '...';
+            animation: dots 1.5s steps(4, end) infinite;
+        }
+        @keyframes dots {
+            0%, 20% { content: ''; }
+            40% { content: '.'; }
+            60% { content: '..'; }
+            80%, 100% { content: '...'; }
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
+<!-- TopAppBar with Opponent info -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-[#f8f6f5] dark:bg-slate-900 border-b-2 border-surface-container-high">
+<!-- Player 1 (You) -->
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary bg-primary-container">
+<img alt="Kid player avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBcXXwQYMBL4MRNQ0N54eYyGQypRTEdaZBdg8L-pdf_bYOgcMFrsTRJlocS1N26ZDcrnZoH7tohWtCaQ9b0BAEkzbT0yvAK0Awp22HlMq4Ez9fHPkYXHEooUrKCR8ENBYjo3OLkkzeegA1iE-8AwD_oElDHhHnLUmP2vp_tBHR1WoPTNxV2g_9Iqu9BXSZxtXaBOeuEEcnY6l174VQsgtrEe35W3wo9u-AoO2s8W6Zv0yJyWqrA13S040cCTuUSW3evZdeJEDUT5Q"/>
+</div>
+<div class="hidden sm:block">
+<p class="text-[10px] font-bold uppercase tracking-wider text-primary">You</p>
+<p class="font-headline font-bold text-sm">Level 12</p>
+</div>
+</div>
+<!-- Live Status / Timer Center -->
+<div class="flex flex-col items-center">
+<div class="flex items-center gap-4 mb-1">
+<span class="font-headline font-black italic text-xl text-primary">VS</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-sm" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-bold text-xs">5</span>
+</div>
+</div>
+<!-- Player 2 (Opponent) -->
+<div class="flex items-center gap-3 text-right">
+<div class="hidden sm:block">
+<p class="text-[10px] font-bold uppercase tracking-wider text-secondary">Leo</p>
+<p class="font-headline font-bold text-sm text-secondary-dim thinking-dots">Thinking</p>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-secondary bg-secondary-container">
+<img alt="Opponent avatar" data-alt="Cute 3D avatar of a boy with brown curly hair and orange glasses, friendly gaming style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1_NfS9iO_v6pS6vN3K_jR6n-Xj5w7v6x8y9z0a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0"/>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-4 max-w-2xl mx-auto min-h-screen flex flex-col items-center">
+<!-- Timer Bar -->
+<div class="w-full h-3 bg-surface-container-highest rounded-full overflow-hidden mb-8 relative">
+<div class="h-full bg-primary-fixed-dim timer-shrink rounded-full"></div>
+</div>
+<!-- Current Question Term -->
+<div class="w-full text-center mb-10 mt-4">
+<span class="bg-primary/10 text-primary px-4 py-1 rounded-full font-bold text-xs tracking-widest uppercase mb-4 inline-block">MATCH THIS TERM</span>
+<p class="font-headline font-bold text-lg text-on-surface-variant mb-1">What is a...</p><h1 class="font-headline font-black italic text-5xl text-on-surface uppercase tracking-tight">NEED</h1>
+</div>
+<!-- Kahoot Style Answer Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full px-2">
+<!-- Answer A: Correct (Pulse Example) -->
+<button class="w-full aspect-[3/1] sm:aspect-square flex items-center justify-center p-6 bg-kahoot-red text-white rounded-2xl chunky-shadow-red active:translate-y-1 active:shadow-none transition-all hover:brightness-110 group relative overflow-hidden">
+<div class="absolute top-4 left-4">
+<span class="material-symbols-outlined text-4xl opacity-30">triangle</span>
+</div>
+<span class="font-headline font-extrabold text-xl sm:text-2xl text-center z-10">Something you must have to survive</span>
+</button>
+<!-- Answer B: Incorrect (Shake Example) -->
+<button class="w-full aspect-[3/1] sm:aspect-square flex items-center justify-center p-6 bg-kahoot-blue text-white rounded-2xl chunky-shadow-blue active:translate-y-1 active:shadow-none transition-all hover:brightness-110 group relative overflow-hidden error-shake">
+<div class="absolute top-4 right-4">
+<span class="material-symbols-outlined text-4xl opacity-30">square</span>
+</div>
+<span class="font-headline font-extrabold text-xl sm:text-2xl text-center z-10">A physical item like a toy</span>
+</button>
+<!-- Answer C -->
+<button class="w-full aspect-[3/1] sm:aspect-square flex items-center justify-center p-6 bg-kahoot-yellow text-white rounded-2xl chunky-shadow-yellow active:translate-y-1 active:shadow-none transition-all hover:brightness-110 group relative overflow-hidden">
+<div class="absolute bottom-4 left-4">
+<span class="material-symbols-outlined text-4xl opacity-30">circle</span>
+</div>
+<span class="font-headline font-extrabold text-xl sm:text-2xl text-center z-10">Something you want but don't need</span>
+</button>
+<!-- Answer D -->
+<button class="w-full aspect-[3/1] sm:aspect-square flex items-center justify-center p-6 bg-kahoot-green text-white rounded-2xl chunky-shadow-green active:translate-y-1 active:shadow-none transition-all hover:brightness-110 group relative overflow-hidden">
+<div class="absolute bottom-4 right-4">
+<span class="material-symbols-outlined text-4xl opacity-30">star</span>
+</div>
+<span class="font-headline font-extrabold text-xl sm:text-2xl text-center z-10">Work done for someone else</span>
+</button>
+</div>
+<!-- Opponent Live Feed Placeholder -->
+<div class="mt-12 p-4 bg-surface-container-low rounded-2xl flex items-center gap-4 border-2 border-dashed border-outline-variant/30">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full bg-primary-container border-2 border-white"></div>
+<div class="w-8 h-8 rounded-full bg-secondary-container border-2 border-white"></div>
+</div>
+<p class="text-sm font-medium text-on-surface-variant italic">14,203 kids are playing EconoKids right now!</p>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-white dark:bg-slate-950 rounded-t-[3rem] border-t-4 border-[#f2f0f0] shadow-[0_-4px_0_0_rgba(0,0,0,0.04)]">
+<!-- Learn Tab (Active) -->
+<a class="flex flex-col items-center justify-center bg-[#2a6900] text-white rounded-[2rem] px-6 py-2 shadow-[0_4px_0_0_#1a4300] hover:scale-105 transition-transform active:translate-y-1 active:shadow-none" href="#">
+<span class="material-symbols-outlined" data-icon="school" style="font-variation-settings: 'FILL' 1;">school</span>
+<span class="font-['Be_Vietnam_Pro'] font-bold text-[12px]">Learn</span>
+</a>
+<!-- Market Tab -->
+<a class="flex flex-col items-center justify-center text-[#725800] px-6 py-2 hover:bg-[#f2f0f0] dark:hover:bg-slate-800 rounded-[2rem] transition-all duration-150 active:translate-y-1 active:shadow-none" href="#">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+<span class="font-['Be_Vietnam_Pro'] font-bold text-[12px]">Market</span>
+</a>
+<!-- Profile Tab -->
+<a class="flex flex-col items-center justify-center text-[#725800] px-6 py-2 hover:bg-[#f2f0f0] dark:hover:bg-slate-800 rounded-[2rem] transition-all duration-150 active:translate-y-1 active:shadow-none" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Be_Vietnam_Pro'] font-bold text-[12px]">Profile</span>
+</a>
+</nav>
+<!-- Decorative Background Elements -->
+<div class="fixed top-1/4 -right-12 opacity-5 pointer-events-none hidden lg:block">
+<span class="material-symbols-outlined text-[20rem] text-secondary rotate-12">bolt</span>
+</div>
+<div class="fixed bottom-1/4 -left-12 opacity-5 pointer-events-none hidden lg:block">
+<span class="material-symbols-outlined text-[15rem] text-primary -rotate-12">trophy</span>
+</div>
+</body></html>

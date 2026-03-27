@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EconoKids - Lesson Complete!</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=Be+Vietnam+Pro:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary": "#fff1d7",
+              "on-primary-fixed": "#1a4700",
+              "surface-dim": "#d5d4d4",
+              "secondary-container": "#ffcb2a",
+              "on-primary-fixed-variant": "#296700",
+              "tertiary-dim": "#00557a",
+              "outline": "#777776",
+              "surface-bright": "#f8f6f5",
+              "inverse-on-surface": "#9e9d9c",
+              "error": "#b02500",
+              "secondary-dim": "#644c00",
+              "primary-fixed-dim": "#76ec33",
+              "tertiary-fixed-dim": "#13adf3",
+              "secondary": "#725800",
+              "surface": "#f8f6f5",
+              "inverse-surface": "#0e0e0e",
+              "on-surface": "#2e2f2f",
+              "on-background": "#2e2f2f",
+              "on-primary-container": "#245c00",
+              "surface-container-low": "#f2f0f0",
+              "surface-container-highest": "#dedcdc",
+              "on-secondary-fixed-variant": "#654d00",
+              "primary-fixed": "#84fb42",
+              "surface-variant": "#dedcdc",
+              "primary-dim": "#235b00",
+              "surface-container": "#e9e8e7",
+              "secondary-fixed": "#ffcb2a",
+              "on-surface-variant": "#5c5b5b",
+              "inverse-primary": "#84fb42",
+              "surface-container-lowest": "#ffffff",
+              "on-error-container": "#520c00",
+              "error-container": "#f95630",
+              "on-error": "#ffefec",
+              "surface-tint": "#2a6900",
+              "tertiary-fixed": "#3ebbff",
+              "on-primary": "#d5ffb9",
+              "on-tertiary": "#e9f4ff",
+              "on-tertiary-fixed": "#001a29",
+              "primary": "#2a6900",
+              "on-secondary-fixed": "#423200",
+              "outline-variant": "#aeadac",
+              "error-dim": "#b92902",
+              "tertiary-container": "#3ebbff",
+              "background": "#f8f6f5",
+              "on-secondary-container": "#5a4400",
+              "surface-container-high": "#e4e2e2",
+              "tertiary": "#00628c",
+              "on-tertiary-fixed-variant": "#003d5a",
+              "secondary-fixed-dim": "#f1bd00",
+              "primary-container": "#84fb42",
+              "on-tertiary-container": "#00344d"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Be Vietnam Pro"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .chunky-shadow-primary { box-shadow: 0 4px 0 0 #235b00; }
+        .chunky-shadow-secondary { box-shadow: 0 4px 0 0 #644c00; }
+        .chunky-shadow-tertiary { box-shadow: 0 4px 0 0 #00557a; }
+        .chunky-shadow-surface { box-shadow: 0 4px 0 0 #dedcdc; }
+        
+        .gloss-effect {
+            background: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 50%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-[#f8f6f5] dark:bg-slate-900">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center overflow-hidden border-2 border-primary">
+<img alt="Avatar" data-alt="cute stylized 3D adventurer character avatar with a friendly smile for a children's educational app" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPHyTQCNm7z2ql6ocFUn2JvZYz1WXpcwccg7h3sryGNJg3U5yubXZGtb-K3WvptrbhjhPw1dAmNtQ2xSgXGMEznzyzjtbr1Vn97au8ckqpRwFEQaYG6Pq_O8Kwg7eLPFk8lZprMTZrZEA4T9gWQEtp1M094PZuuHejUHKvksuUbhjvU-Gz2FtjQ_kbx1Wh92rORIKovrz9WUOnpGWlaCwF4xJZs5CIi2rZYPM_OzjD0Reof-eshIyMK1vcaFH_z3dkSsfQfsJrmgA"/>
+</div>
+<span class="font-headline font-black italic text-[#2a6900] dark:text-green-500 text-lg">EconoKids</span>
+</div>
+<div class="bg-surface-container-lowest px-4 py-1.5 rounded-full flex items-center gap-2 shadow-sm border-2 border-surface-container">
+<span class="font-bold text-secondary">5 ❤️</span>
+</div>
+</header>
+<main class="flex-grow pt-24 pb-32 px-6 max-w-2xl mx-auto w-full flex flex-col items-center justify-center space-y-8">
+<!-- Success Banner -->
+<div class="relative w-full text-center py-6 px-4 bg-secondary-container rounded-xl chunky-shadow-secondary border-2 border-secondary overflow-hidden">
+<div class="absolute inset-0 gloss-effect pointer-events-none"></div>
+<h1 class="font-headline font-black text-4xl text-on-secondary-container tracking-tight">Lesson Complete!</h1>
+</div>
+<!-- Mascot Hero Area -->
+<div class="relative w-full aspect-square max-w-[320px] flex items-center justify-center">
+<!-- Confetti/Coins Burst Background -->
+<div class="absolute inset-0 opacity-20">
+<div class="absolute top-0 left-1/4 animate-bounce"><span class="material-symbols-outlined text-secondary text-4xl">database</span></div>
+<div class="absolute top-1/3 right-0 animate-pulse"><span class="material-symbols-outlined text-primary text-3xl">star</span></div>
+<div class="absolute bottom-1/4 left-0"><span class="material-symbols-outlined text-tertiary text-4xl">celebration</span></div>
+<div class="absolute top-1/2 right-1/4"><span class="material-symbols-outlined text-secondary text-5xl">database</span></div>
+</div>
+<!-- Mascot Image -->
+<img alt="Cheering Piggy Bank" class="relative z-10 w-full h-auto drop-shadow-xl transform hover:scale-105 transition-transform duration-300" data-alt="a happy 3D cartoon piggy bank character jumping and cheering with gold coins flying out, vibrant colors, playful toy aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV0Kau6a9fqQmZa2rJ9uoN3nY3hQAD82jWNMgWPo51CP-zJ_AacmydvDJypcPrEdHuXJ-ZUA1Hfu4FtKVrQngVnXsS4bjWFA43BqY2PZzfQF09Q2sfHNXJqTlzHklC8Ow73m8c265uVghVSWSaT3uLDkRYQhGMqfPTH4ikuFu-Kt4zMeBImgGTVUb-0Po0XHBt5y3qWhRxPwASGZk0fclQko8LaydlcNu-qv8nG8F92LCsxIrSRXOkdN7ZkbmLipi2MgWtHiT_Nmc"/>
+</div>
+<!-- Stats Grid (Bento Style) -->
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4 w-full">
+<!-- Total Score -->
+<div class="bg-surface-container-lowest p-5 rounded-xl border-2 border-surface-container-high flex flex-col items-center justify-center space-y-1 transform hover:-translate-y-1 transition-transform">
+<span class="text-on-surface-variant font-bold text-xs uppercase tracking-wider">Final Score</span>
+<span class="font-headline font-black text-3xl text-primary">1,250</span>
+</div>
+<!-- Accuracy -->
+<div class="bg-surface-container-lowest p-5 rounded-xl border-2 border-surface-container-high flex flex-col items-center justify-center space-y-1 transform hover:-translate-y-1 transition-transform">
+<span class="text-on-surface-variant font-bold text-xs uppercase tracking-wider">Accuracy</span>
+<span class="font-headline font-black text-3xl text-tertiary">92%</span>
+</div>
+<!-- Coins Earned -->
+<div class="col-span-2 md:col-span-1 bg-secondary-container/20 p-5 rounded-xl border-2 border-secondary/30 flex flex-col items-center justify-center space-y-1 transform hover:-translate-y-1 transition-transform">
+<span class="text-secondary font-bold text-xs uppercase tracking-wider">Coins Earned</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary fill" style="font-variation-settings: 'FILL' 1;">database</span>
+<span class="font-headline font-black text-3xl text-secondary">+45</span>
+</div>
+</div>
+</div>
+<!-- Encouragement Card -->
+<div class="bg-primary/5 p-6 rounded-xl border-2 border-dashed border-primary/20 w-full text-center">
+<p class="font-body font-medium text-on-primary-container text-lg leading-relaxed">
+                "Amazing work, <span class="font-bold">Adventurer</span>! You're becoming a pro at managing your digital piggy bank."
+            </p>
+</div>
+</main>
+<!-- Navigation Actions (Sticky Bottom) -->
+<footer class="fixed bottom-0 left-0 w-full bg-white dark:bg-slate-950 px-6 pt-4 pb-8 flex flex-col sm:flex-row gap-4 items-center justify-center border-t-4 border-surface-container-low shadow-[0_-8px_24px_rgba(0,0,0,0.05)]">
+<button class="w-full sm:w-auto min-w-[200px] h-14 bg-surface-container-highest rounded-xl border-2 border-surface-dim chunky-shadow-surface active:translate-y-1 active:shadow-none transition-all flex items-center justify-center gap-2 group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:rotate-180 transition-transform duration-500">replay</span>
+<span class="font-headline font-extrabold text-on-surface-variant">Play Again</span>
+</button>
+<button class="w-full sm:w-auto min-w-[240px] h-14 bg-tertiary rounded-xl border-2 border-tertiary-dim chunky-shadow-tertiary active:translate-y-1 active:shadow-none transition-all flex items-center justify-center gap-2 relative overflow-hidden">
+<div class="absolute inset-0 gloss-effect"></div>
+<span class="font-headline font-extrabold text-white text-lg">Next Lesson</span>
+<span class="material-symbols-outlined text-white">arrow_forward</span>
+</button>
+</footer>
+<!-- BottomNavBar (Suppressed for focused task completion screen as per shell visibility rule) -->
+<!-- Suppression logic: This is a Result/Task-Focused screen, global nav is hidden to prioritize the 'Next Lesson' CTA -->
+</body></html>

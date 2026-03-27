@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EconoKids - Welcome Player!</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=Be+Vietnam+Pro:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .chunky-shadow {
+            box-shadow: 0 4px 0 0 var(--shadow-color);
+        }
+        .chunky-shadow:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 0 0 var(--shadow-color);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary": "#fff1d7",
+                        "on-primary-fixed": "#1a4700",
+                        "surface-dim": "#d5d4d4",
+                        "secondary-container": "#ffcb2a",
+                        "on-primary-fixed-variant": "#296700",
+                        "tertiary-dim": "#00557a",
+                        "outline": "#777776",
+                        "surface-bright": "#f8f6f5",
+                        "inverse-on-surface": "#9e9d9c",
+                        "error": "#b02500",
+                        "secondary-dim": "#644c00",
+                        "primary-fixed-dim": "#76ec33",
+                        "tertiary-fixed-dim": "#13adf3",
+                        "secondary": "#725800",
+                        "surface": "#f8f6f5",
+                        "inverse-surface": "#0e0e0e",
+                        "on-surface": "#2e2f2f",
+                        "on-background": "#2e2f2f",
+                        "on-primary-container": "#245c00",
+                        "surface-container-low": "#f2f0f0",
+                        "surface-container-highest": "#dedcdc",
+                        "on-secondary-fixed-variant": "#654d00",
+                        "primary-fixed": "#84fb42",
+                        "surface-variant": "#dedcdc",
+                        "primary-dim": "#235b00",
+                        "surface-container": "#e9e8e7",
+                        "secondary-fixed": "#ffcb2a",
+                        "on-surface-variant": "#5c5b5b",
+                        "inverse-primary": "#84fb42",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#520c00",
+                        "error-container": "#f95630",
+                        "on-error": "#ffefec",
+                        "surface-tint": "#2a6900",
+                        "tertiary-fixed": "#3ebbff",
+                        "on-primary": "#d5ffb9",
+                        "on-tertiary": "#e9f4ff",
+                        "on-tertiary-fixed": "#001a29",
+                        "primary": "#2a6900",
+                        "on-secondary-fixed": "#423200",
+                        "outline-variant": "#aeadac",
+                        "error-dim": "#b92902",
+                        "tertiary-container": "#3ebbff",
+                        "background": "#f8f6f5",
+                        "on-secondary-container": "#5a4400",
+                        "surface-container-high": "#e4e2e2",
+                        "tertiary": "#00628c",
+                        "on-tertiary-fixed-variant": "#003d5a",
+                        "secondary-fixed-dim": "#f1bd00",
+                        "primary-container": "#84fb42",
+                        "on-tertiary-container": "#00344d"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Be Vietnam Pro"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container min-h-screen flex flex-col items-center justify-center p-6 overflow-x-hidden">
+<!-- The Shell is suppressed for Transactional/Login Screen as per Mandate -->
+<main class="w-full max-w-lg flex flex-col items-center space-y-10 relative">
+<!-- Mascot Overlay: Breaking the box principle -->
+<div class="relative w-full flex justify-center mb-4">
+<div class="absolute -top-12 -right-4 z-10 w-32 h-32 transform rotate-12">
+<img alt="Piggy Mascot" class="w-full h-full object-contain filter drop-shadow-xl" data-alt="A cute, 3D styled pink piggy bank character smiling and holding a shiny gold coin with a star symbol" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6ad9SMDmgqCwEcJIWT_6O6lLKbY9HeJcxDWevhTBrS9r0Qdg381GgDH0fJEWg-abam8kBHdolQWgXvI1RIrleR7CVnq8WkaIvhAcvGRQ34chsLlSzYeZgxO6YkYDKdlbEEwftN1VohOLeCiWZD9UKKRTGtKu4YI1DzQqrNTjQAdMIjW63QPjuetPJcvF7cZs4Trqe9Y6WEkBHXrWeV18jnwVXHEzdL0XwCkgKPH-RAUCimpexfPYK7oq094Lm_3Gc6iBVvmpXuU8"/>
+</div>
+<!-- Brand Anchor Header -->
+<div class="text-center z-0">
+<h1 class="font-headline font-black italic text-6xl text-primary tracking-tighter mb-2">
+                    EconoKids
+                </h1>
+<p class="font-body font-bold text-secondary text-lg">
+                    Where saving is a superpower! 🚀
+                </p>
+</div>
+</div>
+<!-- Content Canvas -->
+<div class="w-full bg-surface-container-lowest p-8 rounded-xl space-y-8 relative shadow-[0_8px_0_0_rgba(0,0,0,0.05)]">
+<!-- Input Zone -->
+<div class="space-y-3">
+<label class="block font-headline font-bold text-on-surface-variant text-xl ml-2" for="player-name">
+                    What's your Player Name?
+                </label>
+<div class="relative">
+<input class="w-full px-6 py-5 bg-surface-container-low border-2 border-outline-variant/20 rounded-xl font-headline font-bold text-2xl text-primary focus:ring-4 focus:ring-primary-container focus:border-primary outline-none transition-all placeholder:text-outline-variant/50" id="player-name" placeholder="Type here..." type="text"/>
+</div>
+</div>
+<!-- Avatar Selection Grid -->
+<div class="space-y-4">
+<label class="block font-headline font-bold text-on-surface-variant text-xl ml-2">
+                    Pick your Hero!
+                </label>
+<div class="grid grid-cols-2 gap-4">
+<!-- Option 1: Piggy Bank -->
+<button class="group flex flex-col items-center p-4 bg-surface rounded-lg border-b-4 border-surface-dim hover:bg-secondary-container/10 hover:border-secondary transition-all active:translate-y-1 active:border-b-0">
+<div class="w-20 h-20 mb-3 flex items-center justify-center bg-white rounded-full shadow-inner">
+<span class="material-symbols-outlined text-5xl text-secondary" style="font-variation-settings: 'FILL' 1;">savings</span>
+</div>
+<span class="font-headline font-bold text-secondary">Piggy Bank</span>
+</button>
+<!-- Option 2: Dollar Bill -->
+<button class="group flex flex-col items-center p-4 bg-surface rounded-lg border-b-4 border-surface-dim hover:bg-primary-container/20 hover:border-primary transition-all active:translate-y-1 active:border-b-0">
+<div class="w-20 h-20 mb-3 flex items-center justify-center bg-white rounded-full shadow-inner">
+<span class="material-symbols-outlined text-5xl text-primary" style="font-variation-settings: 'FILL' 1;">payments</span>
+</div>
+<span class="font-headline font-bold text-primary">Dollar Bill</span>
+</button>
+<!-- Option 3: Treasure Chest -->
+<button class="group flex flex-col items-center p-4 bg-surface rounded-lg border-b-4 border-surface-dim hover:bg-tertiary-container/10 hover:border-tertiary transition-all active:translate-y-1 active:border-b-0">
+<div class="w-20 h-20 mb-3 flex items-center justify-center bg-white rounded-full shadow-inner">
+<span class="material-symbols-outlined text-5xl text-tertiary" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+</div>
+<span class="font-headline font-bold text-tertiary">Treasure Chest</span>
+</button>
+<!-- Option 4: Calculator -->
+<button class="group flex flex-col items-center p-4 bg-surface rounded-lg border-b-4 border-surface-dim hover:bg-error-container/10 hover:border-error transition-all active:translate-y-1 active:border-b-0">
+<div class="w-20 h-20 mb-3 flex items-center justify-center bg-white rounded-full shadow-inner">
+<span class="material-symbols-outlined text-5xl text-error" style="font-variation-settings: 'FILL' 1;">calculate</span>
+</div>
+<span class="font-headline font-bold text-error">Calculator</span>
+</button>
+</div>
+</div>
+<!-- CTA Primary Action -->
+<button class="w-full py-6 bg-primary text-on-primary font-headline font-black text-2xl uppercase tracking-wider rounded-xl chunky-shadow transition-all active:bg-primary-dim" style="--shadow-color: #235b00;">
+                Play Now!
+            </button>
+</div>
+<!-- Footer / Support Info -->
+<footer class="text-center space-y-4 pt-4">
+<p class="font-body font-medium text-on-surface-variant text-sm">
+                Already have an account? <a class="text-primary font-bold hover:underline" href="#">Log in here</a>
+</p>
+<div class="flex items-center justify-center space-x-2 text-outline">
+<span class="material-symbols-outlined text-lg">verified_user</span>
+<span class="font-label text-xs font-bold">KID-SAFE &amp; AD-FREE ENVIRONMENT</span>
+</div>
+</footer>
+</main>
+<!-- Background Decoration: Subtle 3D Depth Elements -->
+<div class="fixed -bottom-20 -left-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+<div class="fixed -top-20 -right-20 w-96 h-96 bg-secondary/5 rounded-full blur-3xl -z-10"></div>
+</body></html>
